@@ -1,9 +1,0 @@
-# TopApps
-
-Aplicación de ejemplo que utiliza diferentes tecnologías:
-
-1. Creada en Swift 2.0
-2. Compatible con iPad y iPhone (con vistas diferentes)
-3. Utilización de MVP (Model-View-Presenter)
-4. Uso de algunas librerías (Alamofire, AlamofireImage, KIF, Nimble)
-5. TestUI del listado de Apps
