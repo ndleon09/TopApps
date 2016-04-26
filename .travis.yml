@@ -1,8 +1,8 @@
 language: objective-c  #1
-osx_image: xcode7.3 #2
+osx_image: xcode7.2 #2
 xcode_workspace: TopApps.xcworkspace #3
 xcode_scheme: TopApps #4
-xcode_sdk: iphonesimulator9.3 #5
+xcode_sdk: iphonesimulator9.2 #5
 
 before_all:
   - sudo gem install cocoapods
