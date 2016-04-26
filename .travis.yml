@@ -10,4 +10,4 @@ install:
   - pod install
 
 script:
-  - set -o pipefail && xcodebuild -workspace TopApps.xcworkspace -scheme TopApps destination 'platform=iOS Simulator,name=iPhone 6,OS=9.3' build test | xcpretty -c
+  - set -o pipefail && xcodebuild -workspace TopApps.xcworkspace -scheme TopApps destination 'platform=iOS Simulator,name=iPhone 6s Plus' build test | xcpretty -c
