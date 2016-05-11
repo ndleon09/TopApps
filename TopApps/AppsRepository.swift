@@ -9,9 +9,15 @@
 import Foundation
 import Alamofire
 
-class AppsRepository
+protocol AppsRepository
 {
-    static let sharedRepository = AppsRepository()
+    func getAll(completion: ([App]) -> ())
+    func getAppById(appid: Int, completion: (App?) -> ())
+}
+
+class AppsRepositoryImp: AppsRepository
+{
+    static let sharedRepository = AppsRepositoryImp()
     
     private var apps: [App] = []
     

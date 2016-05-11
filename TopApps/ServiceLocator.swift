@@ -56,10 +56,10 @@ class ServiceLocator
         return appsViewController
     }
     
-    private func appsPresenter(viewController: AppsUI) -> AppsPresenter
+    private func appsPresenter(viewController: AppsUI) -> AppsPresenterImp
     {
-        let getTopApps = GetTopApps(repository: AppsRepository.sharedRepository)
-        return AppsPresenter(ui: viewController, getTopApps: getTopApps)
+        let getTopApps = GetTopAppsImp(repository: AppsRepositoryImp.sharedRepository)
+        return AppsPresenterImp(ui: viewController, getTopApps: getTopApps)
     }
     
     private func appsListDataSource() -> BothamTableViewDataSource<App, AppTableViewCell> {
@@ -80,9 +80,9 @@ class ServiceLocator
         return appDetailViewController
     }
     
-    private func appDetailPresenter(ui: AppDetailUI, appId: Int, appName: String) -> AppDetailPresenter
+    private func appDetailPresenter(ui: AppDetailUI, appId: Int, appName: String) -> AppDetailPresenterImp
     {
-        let getAppById = GetAppById(repository: AppsRepository.sharedRepository)
-        return AppDetailPresenter(ui: ui, getAppById: getAppById, appId: appId, appName: appName)
+        let getAppById = GetAppByIdImp(repository: AppsRepositoryImp.sharedRepository)
+        return AppDetailPresenterImp(ui: ui, getAppById: getAppById, appId: appId, appName: appName)
     }
 }

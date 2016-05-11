@@ -10,7 +10,12 @@ import Foundation
 import UIKit
 import BothamUI
 
-class AppsPresenter: BothamPresenter, BothamNavigationPresenter
+protocol AppsPresenter: BothamPresenter, BothamNavigationPresenter
+{
+    
+}
+
+class AppsPresenterImp: AppsPresenter
 {
     // UserInterface
     private weak var ui: AppsUI?

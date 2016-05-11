@@ -8,7 +8,12 @@
 
 import Foundation
 
-class GetAppById
+protocol GetAppById
+{
+    func execute(appid: Int, completion: (App?) -> ())
+}
+
+class GetAppByIdImp: GetAppById
 {
     private let repository: AppsRepository
     

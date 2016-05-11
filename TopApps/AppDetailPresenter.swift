@@ -9,7 +9,12 @@
 import Foundation
 import BothamUI
 
-class AppDetailPresenter: BothamPresenter
+protocol AppDetailPresenter: BothamPresenter
+{
+    
+}
+
+class AppDetailPresenterImp: AppDetailPresenter
 {
     // UserInterface
     private weak var ui: AppDetailUI?

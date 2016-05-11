@@ -9,7 +9,7 @@
 import Foundation
 @testable import TopApps
 
-class AppsTestRepository: AppsRepository
+class AppsTestRepository: AppsRepositoryImp
 {
     var apps = [App]()
     

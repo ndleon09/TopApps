@@ -12,7 +12,7 @@ import Nimble
 import UIKit
 @testable import TopApps
 
-class AppsViewControollerTests: AcceptanceTestCase
+class AppsViewControollerTestsUI: AcceptanceTestCase
 {
     private let repository = AppsTestRepository()
     
@@ -71,7 +71,7 @@ class AppsViewControollerTests: AcceptanceTestCase
     private func openAppsListViewController()
     {
         let appsViewController = ServiceLocator().appsListViewController() as! ListAppsViewController
-        appsViewController.presenter = AppsPresenter(ui: appsViewController, getTopApps: GetTopApps(repository: repository))
+        appsViewController.presenter = AppsPresenterImp(ui: appsViewController, getTopApps: GetTopAppsImp(repository: repository))
         
         let rootViewController = UINavigationController(rootViewController: appsViewController)
         presentViewController(rootViewController)
@@ -82,7 +82,7 @@ class AppsViewControollerTests: AcceptanceTestCase
     private func openAppsCollectionViewController()
     {
         let appsViewController = ServiceLocator().appsCollectionViewController() as! AppsCollectionViewController
-        appsViewController.presenter = AppsPresenter(ui: appsViewController, getTopApps: GetTopApps(repository: repository))
+        appsViewController.presenter = AppsPresenterImp(ui: appsViewController, getTopApps: GetTopAppsImp(repository: repository))
         
         let rootViewController = UINavigationController(rootViewController: appsViewController)
         presentViewController(rootViewController)

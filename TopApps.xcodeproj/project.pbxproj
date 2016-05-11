@@ -21,7 +21,7 @@
 		52B40CBC1CCD2E1900C9F9F1 /* AcceptanceTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CBB1CCD2E1900C9F9F1 /* AcceptanceTestCase.swift */; };
 		52B40CC51CCD2F4700C9F9F1 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CC41CCD2F4700C9F9F1 /* XCTestCase.swift */; };
 		52B40CC71CCD2F5F00C9F9F1 /* KIFTestActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CC61CCD2F5F00C9F9F1 /* KIFTestActor.swift */; };
-		52B40CCA1CCD2FB800C9F9F1 /* AppsViewControollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CC91CCD2FB800C9F9F1 /* AppsViewControollerTests.swift */; };
+		52B40CCA1CCD2FB800C9F9F1 /* AppsViewControollerTestsUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CC91CCD2FB800C9F9F1 /* AppsViewControollerTestsUI.swift */; };
 		52B40CCD1CCD33DE00C9F9F1 /* AppsTestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CCC1CCD33DE00C9F9F1 /* AppsTestRepository.swift */; };
 		52C5A23C1CCCA934005B84D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A23B1CCCA934005B84D8 /* AppDelegate.swift */; };
 		52C5A23E1CCCA934005B84D8 /* TopAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A23D1CCCA934005B84D8 /* TopAppsViewController.swift */; };
@@ -60,7 +60,7 @@
 		52B40CBD1CCD2E1900C9F9F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52B40CC41CCD2F4700C9F9F1 /* XCTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		52B40CC61CCD2F5F00C9F9F1 /* KIFTestActor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KIFTestActor.swift; sourceTree = "<group>"; };
-		52B40CC91CCD2FB800C9F9F1 /* AppsViewControollerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewControollerTests.swift; sourceTree = "<group>"; };
+		52B40CC91CCD2FB800C9F9F1 /* AppsViewControollerTestsUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsViewControollerTestsUI.swift; sourceTree = "<group>"; };
 		52B40CCC1CCD33DE00C9F9F1 /* AppsTestRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsTestRepository.swift; sourceTree = "<group>"; };
 		52C5A2381CCCA934005B84D8 /* TopApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TopApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C5A23B1CCCA934005B84D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		52B40CC81CCD2F8100C9F9F1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				52B40CC91CCD2FB800C9F9F1 /* AppsViewControollerTests.swift */,
+				52B40CC91CCD2FB800C9F9F1 /* AppsViewControollerTestsUI.swift */,
 			);
 			name = Tests;
 			sourceTree = "<group>";
@@ -456,7 +456,7 @@
 			files = (
 				52B40CC71CCD2F5F00C9F9F1 /* KIFTestActor.swift in Sources */,
 				52B40CC51CCD2F4700C9F9F1 /* XCTestCase.swift in Sources */,
-				52B40CCA1CCD2FB800C9F9F1 /* AppsViewControollerTests.swift in Sources */,
+				52B40CCA1CCD2FB800C9F9F1 /* AppsViewControollerTestsUI.swift in Sources */,
 				52B40CBC1CCD2E1900C9F9F1 /* AcceptanceTestCase.swift in Sources */,
 				52B40CCD1CCD33DE00C9F9F1 /* AppsTestRepository.swift in Sources */,
 			);

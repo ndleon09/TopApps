@@ -8,7 +8,12 @@
 
 import Foundation
 
-class GetTopApps
+protocol GetTopApps
+{
+    func execute(completion: ([App]) -> ())
+}
+
+class GetTopAppsImp: GetTopApps
 {
     private let repository: AppsRepository
     
