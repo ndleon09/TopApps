@@ -58,7 +58,8 @@ class ServiceLocator
     
     private func appsPresenter(viewController: AppsUI) -> AppsPresenterImp
     {
-        let getTopApps = GetTopAppsImp(repository: AppsRepositoryImp.sharedRepository)
+        let persistence = PersistenceLayer()
+        let getTopApps = GetTopAppsImp(repository: AppsRepositoryImp(persistence: persistence))
         return AppsPresenterImp(ui: viewController, getTopApps: getTopApps)
     }
     
@@ -82,7 +83,8 @@ class ServiceLocator
     
     private func appDetailPresenter(ui: AppDetailUI, appId: Int, appName: String) -> AppDetailPresenterImp
     {
-        let getAppById = GetAppByIdImp(repository: AppsRepositoryImp.sharedRepository)
+        let persistence = PersistenceLayer()
+        let getAppById = GetAppByIdImp(repository: AppsRepositoryImp(persistence: persistence))
         return AppDetailPresenterImp(ui: ui, getAppById: getAppById, appId: appId, appName: appName)
     }
 }

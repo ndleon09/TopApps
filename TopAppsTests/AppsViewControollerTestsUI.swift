@@ -7,41 +7,45 @@
 //
 
 import Foundation
+import UIKit
 import KIF
 import Nimble
-import UIKit
+import RealmSwift
 @testable import TopApps
 
 class AppsViewControollerTestsUI: AcceptanceTestCase
 {
-    private let repository = AppsTestRepository()
+    private var repository: AppsTestRepository!
+    
+    override func setUp() {
+        
+        super.setUp()
+        
+        Realm.Configuration.defaultConfiguration.inMemoryIdentifier = self.name
+        repository = AppsTestRepository(persistence: PersistenceLayer())
+    }
     
     func testShowsTheExactNumberOfApps()
     {
-        let repository = givenThereAreSomeApps()
-        
         if UI_USER_INTERFACE_IDIOM() == .Phone {
             openAppsListViewController()
             let tableView = tester().waitForViewWithAccessibilityLabel("ListAppsTableView") as! UITableView
-            expect(tableView.numberOfRowsInSection(0)).to(equal(repository.count))
+            expect(tableView.numberOfRowsInSection(0)).to(equal(repository.apps.count))
         }
         else {
             openAppsCollectionViewController()
             let collectionView = tester().waitForViewWithAccessibilityLabel("AppsCollectionView") as! UICollectionView
-            expect(collectionView.numberOfItemsInSection(0)).to(equal(repository.count))
+            expect(collectionView.numberOfItemsInSection(0)).to(equal(repository.apps.count))
         }
     }
     
     func testShowsAppNamesIfThereAreApps()
     {
-        let repository = givenThereAreSomeApps()
-        
         if UI_USER_INTERFACE_IDIOM() == .Phone {
             
             openAppsListViewController()
             
-            for i in 0..<repository.count {
-                let app = repository[i]
+            for app in repository.apps {
                 let cell = tester().waitForViewWithAccessibilityLabel("\(app.id)-Identifier") as! AppTableViewCell
                 expect(cell.textLabel?.text).to(equal(app.name))
             }
@@ -49,23 +53,11 @@ class AppsViewControollerTestsUI: AcceptanceTestCase
         else {
             openAppsCollectionViewController()
             
-            for i in 0..<repository.count {
-                let app = repository[i]
+            for app in repository.apps {
                 let appNameLabel = tester().waitForViewWithAccessibilityLabel(app.name) as! UILabel
                 expect(appNameLabel.text).to(equal(app.name))
             }
         }
-    }
-    
-    private func givenThereAreSomeApps(numberOfApps: Int = 10) -> [App]
-    {
-        var apps = [App]()
-        for i in 0..<numberOfApps {
-            let app = App(id: i, name: "App \(i)", category: "Games", image: "http://www.image.com", description: "Description for App \(i)")
-            apps.append(app)
-        }
-        repository.apps = apps
-        return apps
     }
     
     private func openAppsListViewController()

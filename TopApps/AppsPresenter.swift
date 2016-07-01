@@ -33,7 +33,9 @@ class AppsPresenterImp: AppsPresenter
     {
         ui?.showLoader()
         getTopApps.execute { apps in
+            
             self.ui?.hideLoader()
+            
             if apps.isEmpty {
                 self.ui?.showEmptyCase()
             }
@@ -45,7 +47,7 @@ class AppsPresenterImp: AppsPresenter
     
     func itemWasTapped(item: App)
     {
-        let appDetailViewController = ServiceLocator().appDetailViewController(item.id, appName: item.name)
+        let appDetailViewController = ServiceLocator().appDetailViewController(item.id, appName: item.name!)
         ui?.openAppDetailScreen(appDetailViewController)
     }
 }

@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C13B5918CAEF2D91E600E84 /* Pods_TopApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9834E62BF205FBBF58A72E03 /* Pods_TopApps.framework */; };
+		1741FD64D38E1A5ADE1D52AD /* Pods_TopApps_TopAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2F02DFF9366DF6C9007E59 /* Pods_TopApps_TopAppsTests.framework */; };
+		52A24C2E1D26FDE0009536AA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A24C2D1D26FDE0009536AA /* Persistence.swift */; };
 		52B40CA11CCCB85400C9F9F1 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA01CCCB85400C9F9F1 /* ServiceLocator.swift */; };
 		52B40CA31CCCBD7200C9F9F1 /* AppsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA21CCCBD7200C9F9F1 /* AppsRepository.swift */; };
 		52B40CA61CCCBDFE00C9F9F1 /* GetTopApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA51CCCBDFE00C9F9F1 /* GetTopApps.swift */; };
@@ -32,7 +33,8 @@
 		52C5A2581CCCB17E005B84D8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A2571CCCB17E005B84D8 /* App.swift */; };
 		52C5A25B1CCCB1C7005B84D8 /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A25A1CCCB1C7005B84D8 /* AppTableViewCell.swift */; };
 		52C5A25D1CCCB1F6005B84D8 /* AppsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A25C1CCCB1F6005B84D8 /* AppsPresenter.swift */; };
-		538C087FBC1103A4CA5BDFBC /* Pods_TopAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4EEA3F0D1DB4B6F7083E79C /* Pods_TopAppsTests.framework */; };
+		70B000CCF70F2864105A6B3B /* Pods_TopApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534CD9ED9E215D12350390A5 /* Pods_TopApps.framework */; };
+		D5A7C9EB87D69DE0F7168039 /* Pods_TopAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C0566F840D64D7C8BB0A50 /* Pods_TopAppsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +48,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05B758EB462D81667CA6E154 /* Pods-TopAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopAppsTests/Pods-TopAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		0B3E259E98175C4353196667 /* Pods-TopApps-TopAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps-TopAppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		41276E6A7D39C31F4CFBFAD8 /* Pods-TopApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.release.xcconfig"; sourceTree = "<group>"; };
+		52A24C2D1D26FDE0009536AA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		52B40CA01CCCB85400C9F9F1 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		52B40CA21CCCBD7200C9F9F1 /* AppsRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsRepository.swift; sourceTree = "<group>"; };
 		52B40CA51CCCBDFE00C9F9F1 /* GetTopApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTopApps.swift; sourceTree = "<group>"; };
@@ -74,13 +80,13 @@
 		52C5A2571CCCB17E005B84D8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		52C5A25A1CCCB1C7005B84D8 /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		52C5A25C1CCCB1F6005B84D8 /* AppsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsPresenter.swift; sourceTree = "<group>"; };
-		7EBF599B49402725C0107DE6 /* Pods-TopAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopAppsTests/Pods-TopAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		534CD9ED9E215D12350390A5 /* Pods_TopApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D2F02DFF9366DF6C9007E59 /* Pods_TopApps_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C0566F840D64D7C8BB0A50 /* Pods_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7317CD4EDEC7E59283127FB7 /* Pods-TopApps-TopAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps-TopAppsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		83E0F29345E1907FBD0B488A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9834E62BF205FBBF58A72E03 /* Pods_TopApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A14C93A305306030C307C5F4 /* Pods-TopAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAppsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopAppsTests/Pods-TopAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		A4EEA3F0D1DB4B6F7083E79C /* Pods_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BE2FE0B199D9C893209B2FB0 /* Pods-TopApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.debug.xcconfig"; sourceTree = "<group>"; };
-		C200532B4DE81A009843187F /* Pods-TopApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.release.xcconfig"; sourceTree = "<group>"; };
+		8F58698822256CD252E33EE9 /* Pods-TopAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopAppsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopAppsTests/Pods-TopAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A55A7CCC10F0BBF127C3EBB3 /* Pods-TopApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,7 +94,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				538C087FBC1103A4CA5BDFBC /* Pods_TopAppsTests.framework in Frameworks */,
+				D5A7C9EB87D69DE0F7168039 /* Pods_TopAppsTests.framework in Frameworks */,
+				1741FD64D38E1A5ADE1D52AD /* Pods_TopApps_TopAppsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,13 +103,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C13B5918CAEF2D91E600E84 /* Pods_TopApps.framework in Frameworks */,
+				70B000CCF70F2864105A6B3B /* Pods_TopApps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52A24C2C1D26FDC5009536AA /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				52A24C2D1D26FDE0009536AA /* Persistence.swift */,
+			);
+			name = Persistence;
+			sourceTree = "<group>";
+		};
 		52B40CA41CCCBDE600C9F9F1 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +171,7 @@
 				52B40CBA1CCD2E1900C9F9F1 /* TopAppsTests */,
 				52C5A2391CCCA934005B84D8 /* Products */,
 				B4593EAD7D91FECEDE7FD2C7 /* Frameworks */,
-				DCD875975279FC5B0EF51378 /* Pods */,
+				5FFAA7FDD327032F606E3262 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -173,6 +188,8 @@
 			isa = PBXGroup;
 			children = (
 				52C5A2521CCCADAA005B84D8 /* Extensions */,
+				52A24C2C1D26FDC5009536AA /* Persistence */,
+				52B40CA41CCCBDE600C9F9F1 /* UseCase */,
 				52C5A2511CCCACBB005B84D8 /* Model */,
 				52C5A2501CCCACB4005B84D8 /* Presenter */,
 				52C5A24F1CCCACAF005B84D8 /* View */,
@@ -211,7 +228,6 @@
 		52C5A2511CCCACBB005B84D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				52B40CA41CCCBDE600C9F9F1 /* UseCase */,
 				52C5A2571CCCB17E005B84D8 /* App.swift */,
 				52B40CA21CCCBD7200C9F9F1 /* AppsRepository.swift */,
 			);
@@ -235,25 +251,28 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
+		5FFAA7FDD327032F606E3262 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A55A7CCC10F0BBF127C3EBB3 /* Pods-TopApps.debug.xcconfig */,
+				41276E6A7D39C31F4CFBFAD8 /* Pods-TopApps.release.xcconfig */,
+				8F58698822256CD252E33EE9 /* Pods-TopAppsTests.debug.xcconfig */,
+				05B758EB462D81667CA6E154 /* Pods-TopAppsTests.release.xcconfig */,
+				7317CD4EDEC7E59283127FB7 /* Pods-TopApps-TopAppsTests.debug.xcconfig */,
+				0B3E259E98175C4353196667 /* Pods-TopApps-TopAppsTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B4593EAD7D91FECEDE7FD2C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				83E0F29345E1907FBD0B488A /* Pods.framework */,
-				A4EEA3F0D1DB4B6F7083E79C /* Pods_TopAppsTests.framework */,
-				9834E62BF205FBBF58A72E03 /* Pods_TopApps.framework */,
+				534CD9ED9E215D12350390A5 /* Pods_TopApps.framework */,
+				66C0566F840D64D7C8BB0A50 /* Pods_TopAppsTests.framework */,
+				5D2F02DFF9366DF6C9007E59 /* Pods_TopApps_TopAppsTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DCD875975279FC5B0EF51378 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				A14C93A305306030C307C5F4 /* Pods-TopAppsTests.debug.xcconfig */,
-				7EBF599B49402725C0107DE6 /* Pods-TopAppsTests.release.xcconfig */,
-				BE2FE0B199D9C893209B2FB0 /* Pods-TopApps.debug.xcconfig */,
-				C200532B4DE81A009843187F /* Pods-TopApps.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,7 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopAppsTests/Pods-TopAppsTests-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEF7A8477480B3ED9E24821F /* [CP] Copy Pods Resources */ = {
@@ -446,7 +465,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopAppsTests/Pods-TopAppsTests-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,6 +489,7 @@
 			files = (
 				52B40CAE1CCD079800C9F9F1 /* AppsCollectionViewController.swift in Sources */,
 				52C5A23E1CCCA934005B84D8 /* TopAppsViewController.swift in Sources */,
+				52A24C2E1D26FDE0009536AA /* Persistence.swift in Sources */,
 				52C5A2541CCCADE9005B84D8 /* UIColor.swift in Sources */,
 				52C5A2561CCCAE44005B84D8 /* ListAppsViewController.swift in Sources */,
 				52B40CAA1CCCC9B900C9F9F1 /* AppDetailPresenter.swift in Sources */,
@@ -519,7 +539,7 @@
 /* Begin XCBuildConfiguration section */
 		52B40CC11CCD2E1900C9F9F1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A14C93A305306030C307C5F4 /* Pods-TopAppsTests.debug.xcconfig */;
+			baseConfigurationReference = 7317CD4EDEC7E59283127FB7 /* Pods-TopApps-TopAppsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TopAppsTests/Info.plist;
@@ -532,7 +552,7 @@
 		};
 		52B40CC21CCD2E1900C9F9F1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7EBF599B49402725C0107DE6 /* Pods-TopAppsTests.release.xcconfig */;
+			baseConfigurationReference = 0B3E259E98175C4353196667 /* Pods-TopApps-TopAppsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = TopAppsTests/Info.plist;
@@ -630,7 +650,7 @@
 		};
 		52C5A24B1CCCA934005B84D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BE2FE0B199D9C893209B2FB0 /* Pods-TopApps.debug.xcconfig */;
+			baseConfigurationReference = A55A7CCC10F0BBF127C3EBB3 /* Pods-TopApps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TopApps/Info.plist;
@@ -643,7 +663,7 @@
 		};
 		52C5A24C1CCCA934005B84D8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C200532B4DE81A009843187F /* Pods-TopApps.release.xcconfig */;
+			baseConfigurationReference = 41276E6A7D39C31F4CFBFAD8 /* Pods-TopApps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TopApps/Info.plist;

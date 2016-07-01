@@ -8,44 +8,54 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
+import RealmSwift
 
-protocol AppsRepository
-{
+protocol AppsRepository {
+    
     func getAll(completion: ([App]) -> ())
-    func getAppById(appid: Int, completion: (App?) -> ())
+    func getAppById(appid: Int) -> App?
 }
 
-class AppsRepositoryImp: AppsRepository
-{
-    static let sharedRepository = AppsRepositoryImp()
+class AppsRepositoryImp: AppsRepository {
     
-    private var apps: [App] = []
+    var persistenceLayer: PersistenceLayerProtocol
+    var apps: Results<App>
     
-    func getAll(completion: ([App]) -> ())
-    {
-        apps.removeAll()
+    init(persistence: PersistenceLayerProtocol) {
         
-        Alamofire.request(.GET, "https://itunes.apple.com/us/rss/topfreeapplications/limit=30/json").responseJSON { response in
+        persistenceLayer = persistence
+        apps = persistenceLayer.fetchApps()
+    }
+    
+    func getAll(completion: ([App]) -> ()) {
+        
+        let result = self.apps.map { $0 }
+        completion(result)
+        
+        Alamofire.request(.GET, "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json").responseJSON { response in
             
-            if let JSON = response.result.value {
+            if let responseValue = response.result.value {
                 
-                for json: [String: AnyObject] in JSON.valueForKeyPath("feed.entry") as! Array {
-                    if let app = App(json: json) {
-                        self.apps.append(app)
+                if let entry = JSON(responseValue)["feed"]["entry"].array {
+                    
+                    var apps: [App] = []
+                    for json in entry {
+                        let app = App(json: json)
+                        apps.append(app)
                     }
+                    self.persistenceLayer.saveApps(apps)
+                    
+                    let result = self.apps.map { $0 }
+                    completion(result)
                 }
-                
-                completion(self.apps)
-            }
-            else {
-                completion([])
             }
         }
     }
     
-    func getAppById(appid: Int, completion: (App?) -> ())
-    {
-        let app = self.apps.filter { $0.id == appid }.first
-        completion(app)
+    func getAppById(appid: Int) -> App? {
+        
+        let app = self.apps.filter("id = \(appid)").first
+        return app
     }
 }

@@ -7,45 +7,29 @@
 //
 
 import Foundation
-import Gloss
+import RealmSwift
+import SwiftyJSON
 
-struct App: Decodable
+class App: Object
 {
-    var id: Int
-    var name: String
-    var category: String
-    var image: String
-    var description: String?
+    dynamic var id: Int = 0
+    dynamic var name: String?
+    dynamic var category: String?
+    dynamic var image: String?
+    dynamic var summary: String?
     
-    init?(json: JSON)
+    convenience init(json: JSON)
     {
-        guard let idJSON: JSON = "id.attributes" <~~ json,
-        nameJSON: JSON = "im:name" <~~ json,
-        categoryJSON: JSON = "category.attributes" <~~ json,
-        imagesJSON: [JSON] = "im:image" <~~ json,
-        summaryJSON: JSON = "summary" <~~ json
-        else { return nil }
+        self.init()
         
-        guard let id: String = "im:id" <~~ idJSON,
-        name: String = "label" <~~ nameJSON,
-        category: String = "label" <~~ categoryJSON,
-        image: String = "label" <~~ imagesJSON.last!,
-        description: String = "label" <~~ summaryJSON
-        else { return nil }
-        
-        self.id = Int(id)!
-        self.name = name
-        self.category = category
-        self.image = image
-        self.description = description
+        id = json["id"]["attributes"]["im:id"].intValue
+        name = json["im:name"]["label"].stringValue
+        category = json["category"]["attributes"]["label"].stringValue
+        image = json["im:image"].array?.last!["label"].stringValue
+        summary = json["summary"]["label"].stringValue
     }
     
-    init(id: Int, name: String, category: String, image: String, description: String)
-    {
-        self.id = id
-        self.name = name
-        self.category = category
-        self.image = image
-        self.description = description
+    override static func primaryKey() -> String? {
+        return "id"
     }
 }

@@ -37,16 +37,13 @@ class AppDetailPresenterImp: AppDetailPresenter
     func viewDidLoad()
     {
         ui?.title = appName
-        ui?.showLoader()
         
-        getAppById.execute(appId) { app in
-            self.ui?.hideLoader()
-            self.ui?.showApp(app)
-        }
+        let app = getAppById.execute(appId)
+        self.ui?.showApp(app)
     }
 }
 
-protocol AppDetailUI: BothamUI, BothamLoadingUI
+protocol AppDetailUI: BothamUI
 {
     // Title of view
     var title: String? {get set}

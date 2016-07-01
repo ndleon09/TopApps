@@ -11,16 +11,24 @@ import Foundation
 
 class AppsTestRepository: AppsRepositoryImp
 {
-    var apps = [App]()
-    
-    override func getAll(completion: ([App]) -> ())
-    {
-        completion(apps)
+    override init(persistence: PersistenceLayerProtocol) {
+        
+        super.init(persistence: persistence)
+        
+        if apps.count == 0 {
+            
+            var apps = [App]()
+            for i in 1 ... 15 {
+                let app = App(value: ["id": i, "name": "App \(i)", "category": "Category", "summary": "Summary for App \(i)"])
+                apps.append(app)
+            }
+            persistenceLayer.saveApps(apps)
+        }
     }
     
-    override func getAppById(appid: Int, completion: (App?) -> ())
-    {
-        let app = apps.filter { $0.id == appid }.first
-        completion(app)
+    override func getAll(completion: ([App]) -> ()) {
+        
+        let result = apps.map { $0 }
+        completion(result)
     }
 }

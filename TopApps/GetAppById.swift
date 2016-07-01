@@ -10,7 +10,7 @@ import Foundation
 
 protocol GetAppById
 {
-    func execute(appid: Int, completion: (App?) -> ())
+    func execute(appid: Int) -> App?
 }
 
 class GetAppByIdImp: GetAppById
@@ -22,10 +22,8 @@ class GetAppByIdImp: GetAppById
         self.repository = repository
     }
     
-    func execute(appid: Int, completion: (App?) -> ())
-    {
-        self.repository.getAppById(appid) { app in
-            completion(app)
-        }
+    func execute(appid: Int) -> App? {
+        
+        return repository.getAppById(appid)
     }
 }

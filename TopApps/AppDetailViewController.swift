@@ -30,9 +30,9 @@ class AppDetailViewController: TopAppsViewController, AppDetailUI
         )
         let placeholder = UIImage(named: "placeholder")?.af_imageWithRoundedCornerRadius(radius)
         
-        appIconImageView?.af_setImageWithURL(NSURL(string: app.image)!, placeholderImage: placeholder, filter: filter)
+        appIconImageView?.af_setImageWithURL(NSURL(string: app.image!)!, placeholderImage: placeholder, filter: filter)
         appNameLabel.text = app.name
         appCategoryLabel.text = app.category
-        appDescriptionLabel.text = app.description
+        appDescriptionLabel.text = app.summary
     }
 }

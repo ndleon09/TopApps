@@ -23,10 +23,13 @@ class AppTableViewCell: UITableViewCell, BothamViewCell
         )
         let placeholder = UIImage(named: "placeholder")?.af_imageScaledToSize(size).af_imageWithRoundedCornerRadius(radius)
         
-        imageView?.af_setImageWithURL(NSURL(string: item.image)!, placeholderImage: placeholder, filter: filter)
+        if let image = item.image {
+            imageView?.af_setImageWithURL(NSURL(string: image)!, placeholderImage: placeholder, filter: filter)
+        } else {
+            imageView?.image = placeholder
+        }
         
         textLabel?.text = item.name
-        
         detailTextLabel?.numberOfLines = 0
         detailTextLabel?.text = item.category
         
