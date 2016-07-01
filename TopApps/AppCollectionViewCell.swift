@@ -23,7 +23,12 @@ class AppCollectionViewCell: UICollectionViewCell, BothamViewCell
         let filter = AspectScaledToFillSizeWithRoundedCornersFilter(size: size, radius: radius)
         let placeholder = UIImage(named: "placeholder")?.af_imageScaledToSize(size).af_imageWithRoundedCornerRadius(radius)
         
-        appIconImageView?.af_setImageWithURL(NSURL(string: item.image!)!, placeholderImage: placeholder, filter: filter)        
+        if let image = item.image {
+            appIconImageView.af_setImageWithURL(NSURL(string: image)!, placeholderImage: placeholder, filter: filter)
+        } else {
+            appIconImageView.image = placeholder
+        }
+        
         appNameLabel?.text = item.name
     }
 }
