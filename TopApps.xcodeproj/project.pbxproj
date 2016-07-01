@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		22B9DA566120B9B21EFD2E76 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0C463F90865C4761F848FB /* BuddyBuildSDK.framework */; };
 		52A24C2E1D26FDE0009536AA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A24C2D1D26FDE0009536AA /* Persistence.swift */; };
 		52B40CA11CCCB85400C9F9F1 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA01CCCB85400C9F9F1 /* ServiceLocator.swift */; };
 		52B40CA31CCCBD7200C9F9F1 /* AppsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA21CCCBD7200C9F9F1 /* AppsRepository.swift */; };
@@ -61,7 +60,6 @@
 		0B3E259E98175C4353196667 /* Pods-TopApps-TopAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps-TopAppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests.release.xcconfig"; sourceTree = "<group>"; };
 		15A43D0C3C42769F61388892 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		214668DA6E43048A72E0F2B7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		25BB191C6DDD766568B93D90 /* Bridging-Header.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		2782FB62C7706693938642A0 /* Pods_TopApps_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DE9E744E6FF71E71398D5E1 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		41276E6A7D39C31F4CFBFAD8 /* Pods-TopApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 		7317CD4EDEC7E59283127FB7 /* Pods-TopApps-TopAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps-TopAppsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A55A7CCC10F0BBF127C3EBB3 /* Pods-TopApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.debug.xcconfig"; sourceTree = "<group>"; };
 		D7655699FB9D2C33BC02A76A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		DE0C463F90865C4761F848FB /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 		E2B7931A5F6D9DF6EB64726C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F544F64EE31B8CF79899FBB8 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -117,7 +114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC4CCDA865FB43C2E31EBE8D /* Pods_TopApps.framework in Frameworks */,
-				22B9DA566120B9B21EFD2E76 /* BuddyBuildSDK.framework in Frameworks */,
 				C9EBCAE17E8997676C200667 /* AssetsLibrary.framework in Frameworks */,
 				7F897F78C40F926E32B0A0F5 /* CoreText.framework in Frameworks */,
 				E5B14F959E91317FC5DBE283 /* CoreTelephony.framework in Frameworks */,
@@ -194,7 +190,6 @@
 				52C5A2391CCCA934005B84D8 /* Products */,
 				B4593EAD7D91FECEDE7FD2C7 /* Frameworks */,
 				5FFAA7FDD327032F606E3262 /* Pods */,
-				25BB191C6DDD766568B93D90 /* Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,7 +285,6 @@
 			children = (
 				0A1A919C29A83A935CE6DB58 /* Pods_TopApps.framework */,
 				2782FB62C7706693938642A0 /* Pods_TopApps_TopAppsTests.framework */,
-				DE0C463F90865C4761F848FB /* BuddyBuildSDK.framework */,
 				F544F64EE31B8CF79899FBB8 /* AssetsLibrary.framework */,
 				3DE9E744E6FF71E71398D5E1 /* CoreText.framework */,
 				70F5C19D882F3230770E176B /* CoreTelephony.framework */,
@@ -690,7 +684,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndleon09.TopApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Debug;
 		};
@@ -708,7 +702,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ndleon09.TopApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
