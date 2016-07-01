@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1741FD64D38E1A5ADE1D52AD /* Pods_TopApps_TopAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D2F02DFF9366DF6C9007E59 /* Pods_TopApps_TopAppsTests.framework */; };
 		52A24C2E1D26FDE0009536AA /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A24C2D1D26FDE0009536AA /* Persistence.swift */; };
 		52B40CA11CCCB85400C9F9F1 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA01CCCB85400C9F9F1 /* ServiceLocator.swift */; };
 		52B40CA31CCCBD7200C9F9F1 /* AppsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B40CA21CCCBD7200C9F9F1 /* AppsRepository.swift */; };
@@ -33,8 +32,8 @@
 		52C5A2581CCCB17E005B84D8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A2571CCCB17E005B84D8 /* App.swift */; };
 		52C5A25B1CCCB1C7005B84D8 /* AppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A25A1CCCB1C7005B84D8 /* AppTableViewCell.swift */; };
 		52C5A25D1CCCB1F6005B84D8 /* AppsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C5A25C1CCCB1F6005B84D8 /* AppsPresenter.swift */; };
-		70B000CCF70F2864105A6B3B /* Pods_TopApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 534CD9ED9E215D12350390A5 /* Pods_TopApps.framework */; };
-		D5A7C9EB87D69DE0F7168039 /* Pods_TopAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66C0566F840D64D7C8BB0A50 /* Pods_TopAppsTests.framework */; };
+		DC4CCDA865FB43C2E31EBE8D /* Pods_TopApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1A919C29A83A935CE6DB58 /* Pods_TopApps.framework */; };
+		F587426A8FEF759320D14696 /* Pods_TopApps_TopAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2782FB62C7706693938642A0 /* Pods_TopApps_TopAppsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,7 +47,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A1A919C29A83A935CE6DB58 /* Pods_TopApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B3E259E98175C4353196667 /* Pods-TopApps-TopAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps-TopAppsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		2782FB62C7706693938642A0 /* Pods_TopApps_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41276E6A7D39C31F4CFBFAD8 /* Pods-TopApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.release.xcconfig"; sourceTree = "<group>"; };
 		52A24C2D1D26FDE0009536AA /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		52B40CA01CCCB85400C9F9F1 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
@@ -79,11 +80,7 @@
 		52C5A2571CCCB17E005B84D8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		52C5A25A1CCCB1C7005B84D8 /* AppTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTableViewCell.swift; sourceTree = "<group>"; };
 		52C5A25C1CCCB1F6005B84D8 /* AppsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppsPresenter.swift; sourceTree = "<group>"; };
-		534CD9ED9E215D12350390A5 /* Pods_TopApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5D2F02DFF9366DF6C9007E59 /* Pods_TopApps_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopApps_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		66C0566F840D64D7C8BB0A50 /* Pods_TopAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TopAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7317CD4EDEC7E59283127FB7 /* Pods-TopApps-TopAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps-TopAppsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps-TopAppsTests/Pods-TopApps-TopAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
-		83E0F29345E1907FBD0B488A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A55A7CCC10F0BBF127C3EBB3 /* Pods-TopApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TopApps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TopApps/Pods-TopApps.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,8 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5A7C9EB87D69DE0F7168039 /* Pods_TopAppsTests.framework in Frameworks */,
-				1741FD64D38E1A5ADE1D52AD /* Pods_TopApps_TopAppsTests.framework in Frameworks */,
+				F587426A8FEF759320D14696 /* Pods_TopApps_TopAppsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				70B000CCF70F2864105A6B3B /* Pods_TopApps.framework in Frameworks */,
+				DC4CCDA865FB43C2E31EBE8D /* Pods_TopApps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,10 +259,8 @@
 		B4593EAD7D91FECEDE7FD2C7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				83E0F29345E1907FBD0B488A /* Pods.framework */,
-				534CD9ED9E215D12350390A5 /* Pods_TopApps.framework */,
-				66C0566F840D64D7C8BB0A50 /* Pods_TopAppsTests.framework */,
-				5D2F02DFF9366DF6C9007E59 /* Pods_TopApps_TopAppsTests.framework */,
+				0A1A919C29A83A935CE6DB58 /* Pods_TopApps.framework */,
+				2782FB62C7706693938642A0 /* Pods_TopApps_TopAppsTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
