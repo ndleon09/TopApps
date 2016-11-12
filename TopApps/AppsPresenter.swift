@@ -17,10 +17,10 @@ protocol AppsPresenter: BothamPresenter, BothamNavigationPresenter {
 class AppsPresenterImp: AppsPresenter {
     
     // UserInterface
-    private weak var ui: AppsUI?
+    fileprivate weak var ui: AppsUI?
     
     // UseCase
-    private let getTopApps: GetTopApps
+    fileprivate let getTopApps: GetTopApps
     
     init(ui: AppsUI, getTopApps: GetTopApps)
     {
@@ -32,19 +32,12 @@ class AppsPresenterImp: AppsPresenter {
     {
         ui?.showLoader()
         getTopApps.execute { apps in
-            
             self.ui?.hideLoader()
-            
-            if apps.isEmpty {
-                self.ui?.showEmptyCase()
-            }
-            else {
-                self.ui?.showItems(apps)
-            }
+            apps.isEmpty ? self.ui?.showEmptyCase() : self.ui?.show(items: apps)
         }
     }
     
-    func itemWasTapped(item: App)
+    func itemWasTapped(_ item: App)
     {
         let appDetailViewController = ServiceLocator().appDetailViewController(item.id, appName: item.name!)
         ui?.openAppDetailScreen(appDetailViewController)
@@ -54,6 +47,6 @@ class AppsPresenterImp: AppsPresenter {
 protocol AppsUI: BothamUI, BothamLoadingUI
 {
     func showEmptyCase()
-    func showItems(items: [App])
-    func openAppDetailScreen(appDetailViewController: UIViewController)
+    func show(items: [App])
+    func openAppDetailScreen(_ appDetailViewController: UIViewController)
 }

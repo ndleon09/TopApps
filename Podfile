@@ -1,17 +1,17 @@
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '8.0'
+platform :ios, '9.0'
 use_frameworks!
 
 target 'TopApps' do
-    
+
 	pod 'BothamUI'
 	pod 'Alamofire'
 	pod 'AlamofireImage'
 	pod 'SwiftyJSON'
     pod 'RealmSwift'
-    
+
     target 'TopAppsTests' do
         pod 'Nimble'
-        pod 'KIF', '~> 3.0', :configurations => ['Debug']
+        pod 'KIF'
     end
 end

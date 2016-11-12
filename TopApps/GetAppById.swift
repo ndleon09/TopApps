@@ -8,22 +8,19 @@
 
 import Foundation
 
-protocol GetAppById
-{
+protocol GetAppById {
     func execute(appid: Int) -> App?
 }
 
-class GetAppByIdImp: GetAppById
-{
-    private let repository: AppsRepository
+class GetAppByIdImp: GetAppById {
     
-    init(repository: AppsRepository)
-    {
+    fileprivate let repository: AppsRepository
+    
+    init(repository: AppsRepository) {
         self.repository = repository
     }
     
     func execute(appid: Int) -> App? {
-        
-        return repository.getAppById(appid)
+        return repository.getAppById(appid: appid)
     }
 }

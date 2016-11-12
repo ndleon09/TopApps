@@ -17,9 +17,9 @@ class AppDetailViewController: TopAppsViewController, AppDetailUI
     @IBOutlet weak var appCategoryLabel: UILabel!
     @IBOutlet weak var appDescriptionLabel: UITextView!
     
-    func showApp(application: App?)
-    {
-        guard let app = application else {
+    func show(app: App?) {
+        
+        guard let app = app, let url = app.image else {
             return
         }
         
@@ -28,9 +28,9 @@ class AppDetailViewController: TopAppsViewController, AppDetailUI
             size: appIconImageView.frame.size,
             radius: radius
         )
-        let placeholder = UIImage(named: "placeholder")?.af_imageWithRoundedCornerRadius(radius)
+        let placeholder = UIImage(named: "placeholder")?.af_imageRounded(withCornerRadius: radius)
         
-        appIconImageView?.af_setImageWithURL(NSURL(string: app.image!)!, placeholderImage: placeholder, filter: filter)
+        appIconImageView?.af_setImage(withURL: URL(string: url)!, placeholderImage: placeholder, filter: filter, progress: nil, progressQueue: DispatchQueue.main, imageTransition: .crossDissolve(0.5), runImageTransitionIfCached: false, completion: nil)
         appNameLabel.text = app.name
         appCategoryLabel.text = app.category
         appDescriptionLabel.text = app.summary

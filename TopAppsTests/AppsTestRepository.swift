@@ -22,13 +22,12 @@ class AppsTestRepository: AppsRepositoryImp
                 let app = App(value: ["id": i, "name": "App \(i)", "category": "Category", "summary": "Summary for App \(i)"])
                 apps.append(app)
             }
-            persistenceLayer.saveApps(apps)
+            persistenceLayer.save(apps: apps)
         }
     }
     
-    override func getAll(completion: ([App]) -> ()) {
-        
-        let result = apps.map { $0 }
+    override func getAll(completion: @escaping ([App]) -> ()) {
+        let result = Array(apps)
         completion(result)
     }
 }

@@ -13,18 +13,16 @@ import AlamofireImage
 
 class AppTableViewCell: UITableViewCell, BothamViewCell
 {
-    func configureForItem(item: App)
-    {
-        let size: CGSize = CGSizeMake(50.0, 50.0)
+    
+    func configure(forItem item: App) {
+        
+        let size: CGSize = CGSize(width: 50.0, height: 50.0)
         let radius: CGFloat = 8.0
-        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(
-            size: size,
-            radius: radius
-        )
-        let placeholder = UIImage(named: "placeholder")?.af_imageScaledToSize(size).af_imageWithRoundedCornerRadius(radius)
+        let filter = AspectScaledToFillSizeWithRoundedCornersFilter(size: size, radius: radius)
+        let placeholder = UIImage(named: "placeholder")?.af_imageAspectScaled(toFit: size).af_imageRounded(withCornerRadius: radius)
         
         if let image = item.image {
-            imageView?.af_setImageWithURL(NSURL(string: image)!, placeholderImage: placeholder, filter: filter)
+            imageView?.af_setImage(withURL: URL(string: image)!, placeholderImage: placeholder, filter: filter, progress: nil, progressQueue: DispatchQueue.main, imageTransition: .crossDissolve(0.4), runImageTransitionIfCached: false, completion: nil)
         } else {
             imageView?.image = placeholder
         }
