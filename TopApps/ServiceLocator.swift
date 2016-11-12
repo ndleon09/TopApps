@@ -12,7 +12,7 @@ import BothamUI
 
 class ServiceLocator
 {
-    private lazy var storyBoard: BothamStoryboard = {
+    fileprivate lazy var storyBoard: BothamStoryboard = {
         return BothamStoryboard(name: "Main")
     }()
     
@@ -20,7 +20,7 @@ class ServiceLocator
     {
         let navigationController: UINavigationController = storyBoard.initialViewController()
         
-        if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.Pad {
+        if UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad {
             navigationController.viewControllers = [appsCollectionViewController()]
         }
         else {
@@ -56,24 +56,24 @@ class ServiceLocator
         return appsViewController
     }
     
-    private func appsPresenter(viewController: AppsUI) -> AppsPresenterImp
+    fileprivate func appsPresenter(_ viewController: AppsUI) -> AppsPresenterImp
     {
         let persistence = PersistenceLayer()
         let getTopApps = GetTopAppsImp(repository: AppsRepositoryImp(persistence: persistence))
         return AppsPresenterImp(ui: viewController, getTopApps: getTopApps)
     }
     
-    private func appsListDataSource() -> BothamTableViewDataSource<App, AppTableViewCell> {
+    fileprivate func appsListDataSource() -> BothamTableViewDataSource<App, AppTableViewCell> {
         return BothamTableViewDataSource<App, AppTableViewCell>()
     }
     
-    private func appsCollectionDataSource() -> BothamCollectionViewDataSource<App, AppCollectionViewCell> {
+    fileprivate func appsCollectionDataSource() -> BothamCollectionViewDataSource<App, AppCollectionViewCell> {
         return BothamCollectionViewDataSource<App, AppCollectionViewCell>()
     }
     
     // MARK: DetailTopApps
     
-    func appDetailViewController(appId: Int, appName: String) -> UIViewController
+    func appDetailViewController(_ appId: Int, appName: String) -> UIViewController
     {
         let appDetailViewController: AppDetailViewController = storyBoard.instantiateViewController("AppDetailViewController")
         let presenter = appDetailPresenter(appDetailViewController, appId: appId, appName: appName)
@@ -81,7 +81,7 @@ class ServiceLocator
         return appDetailViewController
     }
     
-    private func appDetailPresenter(ui: AppDetailUI, appId: Int, appName: String) -> AppDetailPresenterImp
+    fileprivate func appDetailPresenter(_ ui: AppDetailUI, appId: Int, appName: String) -> AppDetailPresenterImp
     {
         let persistence = PersistenceLayer()
         let getAppById = GetAppByIdImp(repository: AppsRepositoryImp(persistence: persistence))

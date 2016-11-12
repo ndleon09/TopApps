@@ -8,24 +8,19 @@
 
 import Foundation
 
-protocol GetTopApps
-{
-    func execute(completion: ([App]) -> ())
+protocol GetTopApps {
+    func execute(completion: @escaping ([App]) -> ())
 }
 
-class GetTopAppsImp: GetTopApps
-{
-    private let repository: AppsRepository
+class GetTopAppsImp: GetTopApps {
     
-    init(repository: AppsRepository)
-    {
+    fileprivate let repository: AppsRepository
+    
+    init(repository: AppsRepository) {
         self.repository = repository
     }
     
-    func execute(completion: ([App]) -> ())
-    {
-        repository.getAll() { apps in
-            completion(apps)
-        }
+    func execute(completion: @escaping ([App]) -> ()) {
+        repository.getAll(completion: completion)
     }
 }

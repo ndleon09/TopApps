@@ -10,10 +10,10 @@ import Foundation
 import BothamUI
 import UIKit
 
-public class AppsCollectionViewNavigationDelegate<T: BothamViewDataSource, U: BothamNavigationPresenter where T.ItemType == U.ItemType>: NSObject, UICollectionViewDelegate
+open class AppsCollectionViewNavigationDelegate<T: BothamViewDataSource, U: BothamNavigationPresenter>: NSObject, UICollectionViewDelegate where T.ItemType == U.ItemType
 {
-    private let dataSource: T
-    private let presenter: U
+    fileprivate let dataSource: T
+    fileprivate let presenter: U
     
     public init(dataSource: T, presenter: U)
     {
@@ -21,9 +21,9 @@ public class AppsCollectionViewNavigationDelegate<T: BothamViewDataSource, U: Bo
         self.presenter = presenter
     }
     
-    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath)
+    open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
     {
-        let item = dataSource.itemAtIndexPath(indexPath)
+        let item = dataSource.item(at: indexPath)
         presenter.itemWasTapped(item)
     }
 }

@@ -27,34 +27,34 @@ class AppsCollectionViewController: TopAppsViewController, BothamCollectionViewC
         collectionView.delegate = delegate
         collectionView.accessibilityLabel = "AppsCollectionView"
         
-        emptyView.hidden = true
+        emptyView.isHidden = true
         
         super.viewDidLoad()
     }
     
     func showEmptyCase()
     {
-        emptyView.hidden = false
+        emptyView.isHidden = false
     }
     
-    func openAppDetailScreen(appDetailViewController: UIViewController)
+    func openAppDetailScreen(_ appDetailViewController: UIViewController)
     {
-        appDetailViewController.modalPresentationStyle = .Popover
-        appDetailViewController.preferredContentSize = CGSizeMake(CGRectGetWidth(view.bounds) / 2, 350)
+        appDetailViewController.modalPresentationStyle = .popover
+        appDetailViewController.preferredContentSize = CGSize(width: (view.bounds).width / 2, height: 350)
         
         if !UIAccessibilityIsReduceTransparencyEnabled() {
-            appDetailViewController.view.backgroundColor = UIColor.clearColor()
-            let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.ExtraLight))
+            appDetailViewController.view.backgroundColor = UIColor.clear
+            let blurView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.extraLight))
             blurView.frame = appDetailViewController.view.bounds
-            appDetailViewController.view.insertSubview(blurView, atIndex: 0)
+            appDetailViewController.view.insertSubview(blurView, at: 0)
         }
         
         let popoverController = appDetailViewController.popoverPresentationController
-        popoverController?.backgroundColor = UIColor.clearColor()
-        popoverController?.permittedArrowDirections = .Any
+        popoverController?.backgroundColor = UIColor.clear
+        popoverController?.permittedArrowDirections = .any
         popoverController?.sourceView = self.view
-        popoverController?.sourceRect = CGRectMake(CGRectGetWidth(view.bounds) / 2, 0, 1, 1)
+        popoverController?.sourceRect = CGRect(x: (view.bounds).width / 2, y: 0, width: 1, height: 1)
         
-        presentViewController(appDetailViewController, animated: true, completion: nil)
+        present(appDetailViewController, animated: true, completion: nil)
     }
 }

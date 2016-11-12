@@ -13,7 +13,7 @@ import RealmSwift
 
 protocol AppsRepository {
     
-    func getAll(completion: ([App]) -> ())
+    func getAll(completion: @escaping ([App]) -> ())
     func getAppById(appid: Int) -> App?
 }
 
@@ -28,15 +28,14 @@ class AppsRepositoryImp: AppsRepository {
         apps = persistenceLayer.fetchApps()
     }
     
-    func getAll(completion: ([App]) -> ()) {
+    func getAll(completion: @escaping ([App]) -> ()) {
         
-        let result = self.apps.map { $0 }
+        let result = Array(apps)
         completion(result)
         
-        Alamofire.request(.GET, "https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json").responseJSON { response in
+        Alamofire.request("https://itunes.apple.com/us/rss/topfreeapplications/limit=20/json").responseJSON { response in
             
             if let responseValue = response.result.value {
-                
                 if let entry = JSON(responseValue)["feed"]["entry"].array {
                     
                     var apps: [App] = []
@@ -44,9 +43,9 @@ class AppsRepositoryImp: AppsRepository {
                         let app = App(json: json)
                         apps.append(app)
                     }
-                    self.persistenceLayer.saveApps(apps)
+                    self.persistenceLayer.save(apps: apps)
                     
-                    let result = self.apps.map { $0 }
+                    let result = Array(apps)
                     completion(result)
                 }
             }
@@ -54,7 +53,6 @@ class AppsRepositoryImp: AppsRepository {
     }
     
     func getAppById(appid: Int) -> App? {
-        
         let app = self.apps.filter("id = \(appid)").first
         return app
     }

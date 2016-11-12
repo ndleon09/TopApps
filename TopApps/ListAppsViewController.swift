@@ -26,7 +26,7 @@ class ListAppsViewController: TopAppsViewController, BothamTableViewController, 
         tableView.tableFooterView = UIView()
         tableView.accessibilityLabel = "ListAppsTableView"
         
-        emptyView.hidden = true
+        emptyView.isHidden = true
         
         configureNavigationBarBackButton()
         
@@ -35,16 +35,16 @@ class ListAppsViewController: TopAppsViewController, BothamTableViewController, 
     
     func showEmptyCase()
     {
-        emptyView.hidden = false
+        emptyView.isHidden = false
     }
     
-    func openAppDetailScreen(appDetailViewController: UIViewController)
+    func openAppDetailScreen(_ appDetailViewController: UIViewController)
     {
-        navigationController?.push(appDetailViewController)
+        navigationController?.push(viewController: appDetailViewController)
     }
     
-    private func configureNavigationBarBackButton()
+    fileprivate func configureNavigationBarBackButton()
     {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
+        navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
     }
 }
