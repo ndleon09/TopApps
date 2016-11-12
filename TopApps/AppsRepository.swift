@@ -38,15 +38,9 @@ class AppsRepositoryImp: AppsRepository {
             if let responseValue = response.result.value {
                 if let entry = JSON(responseValue)["feed"]["entry"].array {
                     
-                    var apps: [App] = []
-                    for json in entry {
-                        let app = App(json: json)
-                        apps.append(app)
-                    }
+                    let apps: [App] = entry.map { App.build(json: $0) }
                     self.persistenceLayer.save(apps: apps)
-                    
-                    let result = Array(apps)
-                    completion(result)
+                    completion(apps)
                 }
             }
         }

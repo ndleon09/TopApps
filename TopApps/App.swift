@@ -18,18 +18,22 @@ class App: Object
     dynamic var image: String?
     dynamic var summary: String?
     
-    convenience init(json: JSON)
-    {
-        self.init()
-        
-        id = json["id"]["attributes"]["im:id"].intValue
-        name = json["im:name"]["label"].stringValue
-        category = json["category"]["attributes"]["label"].stringValue
-        image = json["im:image"].array?.last!["label"].stringValue
-        summary = json["summary"]["label"].stringValue
-    }
-    
     override static func primaryKey() -> String? {
         return "id"
+    }
+}
+
+extension App {
+    
+    static func build(json: JSON) -> App {
+    
+        let app = App()
+        app.id = json["id"]["attributes"]["im:id"].intValue
+        app.name = json["im:name"]["label"].stringValue
+        app.category = json["category"]["attributes"]["label"].stringValue
+        app.image = json["im:image"].array?.last!["label"].stringValue
+        app.summary = json["summary"]["label"].stringValue
+        
+        return app
     }
 }
