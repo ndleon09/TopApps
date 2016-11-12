@@ -1,12 +1,5 @@
 language: objective-c
 osx_image: xcode8
 
-before_install:
-  - gem install xcpretty
-  - gem install cocoapods
-
-install:
-  - pod install
-
 script:
   - set -o pipefail && xcodebuild -workspace TopApps.xcworkspace -scheme TopApps -destination 'platform=iOS Simulator,name=iPhone 6s,OS=10.0' build test | xcpretty -c
